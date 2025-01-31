@@ -1,0 +1,36 @@
+@import "../../../../assets/scss/variables.scss";
+.listWrap{
+  border-radius: 10px;
+  border: 1px solid $colorLine;    
+  @apply p-8 rounded-lg bg-white border;
+  @media only screen and (max-width: 576px) {
+    @apply p-4;
+  }
+  .filterWrap {
+    .search{
+      @apply mb-3.5 w-[500px];
+
+      @media only screen and (max-width: 1200px) {
+        @apply w-[450px];
+      }
+
+      @media only screen and (max-width: 768px) {
+        @apply w-full;
+      }
+
+    }
+    @apply mb-2.5 flex justify-between;
+  }
+}
+
+.originalPrice {
+  color: $colorRed;
+  font-weight: 600;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.currentPrice {
+  color: $colorGreen;
+  font-weight: 600;
+}

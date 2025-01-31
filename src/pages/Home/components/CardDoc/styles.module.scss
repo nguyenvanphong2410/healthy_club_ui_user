@@ -1,0 +1,84 @@
+@import "../../../../assets/scss/variables";
+
+.cardContainer {
+    margin-top: 50px;
+    
+    .title {
+        word-wrap: break-word;
+        color: $colorBlueStrong;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 60px;
+        padding: 10px;
+        text-align: center;
+        margin-top: 150px;
+
+        .titlePart {
+            color: $colorMain;
+        }
+    }
+    
+    .subtitle {
+        color: $colorMain;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 300;
+        margin-top: 27px;
+        margin-bottom: 30px;
+    }
+
+    .gt {
+		margin-top: 10px;
+		color: $colorOrange;
+		font-size: 12px;
+		width: 280px;
+        font-style: italic;
+        margin-bottom: 10px;
+	  }
+}
+
+.titleCourseCard {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 700;
+    color: $colorBlueStrong;
+    margin-bottom: 10px;
+
+    .titleCard {
+        margin-top: 5px;
+        color: rgb(48, 47, 47);
+    }
+}
+
+.infoCourseWrap {
+    .infoItem{
+        display: flex;
+
+        .nameField {
+            font-weight: 600;
+            color: $colorText;
+            margin-bottom: 4px;
+            white-space: nowrap;
+        }
+
+        .contentField {
+            color: $colorGrayStrong;
+            margin-left: 5px;
+            text-align: justify;
+
+            .originalPrice {
+                color: $colorRed;
+                font-style: italic;
+                text-decoration: line-through;
+                font-size: 12px;
+            }
+
+            .currentPrice {
+                color: $colorGreen;
+                font-weight: 600;
+            }
+        }
+    }
+}

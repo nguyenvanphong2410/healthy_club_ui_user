@@ -1,0 +1,123 @@
+.calendar_wrapper {
+  position: relative;
+  padding: 20px 50px;
+
+  .title {
+    position: absolute;
+    top: 44px;
+    left: 80px;
+    p {
+      font-size: 20px;
+      color: gray;
+      font-weight: 600;
+    }
+  }
+
+  .select_status {
+    position: absolute;
+    top: 44px;
+    right: 268px;
+    width: 160px;
+  }
+}
+
+.calendar {
+  border-radius: 10px;
+  box-shadow: #64646f4d 0 7px 29px 0;
+  overflow: hidden;
+
+  :global {
+    .ant-picker-calendar-mode-switch {
+      display: none;
+    }
+
+    .ant-select {
+      margin-top: 12px;
+      margin-right: 25px;
+    }
+
+    .ant-picker-calendar-year-select {
+      margin-right: 10px;
+    }
+
+    .ant-picker-body {
+      margin: 20px;
+    }
+
+    .ant-badge-status-dot {
+      margin-left: 5px;
+    }
+
+    table {
+
+      thead,
+      tbody,
+      tr,
+      th,
+      td {
+        display: block;
+      }
+
+      tr:after {
+        content: ' ';
+        display: block;
+        visibility: hidden;
+        clear: both;
+      }
+
+      tbody {
+        // height: calc(100vh - 311px);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      tbody td,
+      thead th {
+        width: calc(100% / 7);
+        float: left;
+      }
+    }
+  }
+
+  .list_booking {
+    list-style: none;
+    margin-left: -40px;
+  }
+
+  .booking_item {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-left: 40px;
+  }
+}
+.pictures {
+  @apply w-[300px] h-[200px] shadow border-[#f1efef] rounded-[8px] border-[3px] object-cover
+}
+.contentInfoWrap {
+  .classSelectedInfo {
+    display: flex;
+    padding: 4px 0;
+
+    .fieldName {
+      font-size: 14px;
+      font-weight: 600;
+      margin-right: 4px;
+      display: flex;
+      flex-wrap: nowrap;
+      min-width: 80px;
+    }
+
+    .content {
+      color: grey;
+     
+
+      .textThreeDot {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

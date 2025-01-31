@@ -1,0 +1,133 @@
+@import "../../../assets/scss/variables.scss";
+
+.headerWrap {
+  position: fixed;
+  background: #000000;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 100%;
+  z-index: 9999999;
+
+  .headerContent {
+    width: 100%;
+    height: 70px;
+
+    .headerLeftWrap {
+      padding: 10px;
+      width: 300px;
+
+      .logoHeader {
+
+        .imgWrap {
+          img {
+            transition: transform 0.8s ease, box-shadow 0.3s ease;
+
+            /* Thêm thuộc tính transition */
+            &:hover {
+              transform: scale(1.2)
+            }
+
+            @apply object-cover cursor-pointer w-auto h-[60px];
+          }
+        }
+
+        @apply flex justify-center items-center h-[44px] transition-all duration-500 overflow-hidden relative
+      }
+
+      @apply mr-5;
+    }
+
+    .navBar {
+      display: flex;
+      justify-content: space-between !important;
+      width: 100%;
+
+      .navContent {
+        margin-top: 5px;
+
+        .activePath {
+          color: $colorMain !important;
+        }
+
+        .navItem {
+          color: $colorGrayStrong;
+
+          &:hover {
+            color: $colorMain;
+
+          }
+
+          @apply py-2 px-3 block font-semibold text-[16px] cursor-pointer
+        }
+
+        @apply flex space-x-5;
+      }
+
+    }
+
+    .headerRightWrap {
+      .itemHeaderRight {
+        &:hover {
+          .iconWrap {
+            @apply text-blue-65
+          }
+        }
+
+        .iconWrap {
+          @apply flex items-center text-base transition-all duration-300 text-black-20
+        }
+
+        .infoWrap {
+          .avatarWrap {
+            img {
+              border-radius: 6px;
+              border: 3px solid $colorMain;
+              @apply w-full h-full object-cover
+            }
+
+            @apply md:w-11 md:h-11 overflow-hidden md:mr-1.5 flex items-center justify-center
+          }
+
+          .info {
+            span {
+              @apply leading-none block
+            }
+
+            .name {
+              @apply font-bold flex items-center
+            }
+
+            @apply not-italic font-normal text-sm text-black-20 mr-1
+          }
+
+          .btnWrap {
+            @apply flex items-center mr-0.5
+          }
+
+          @apply flex justify-start items-center
+        }
+
+        @apply md:p-2.5 my-0 md:mx-[5px] cursor-pointer flex items-center
+      }
+
+      .itemChangeTheme {
+        @apply py-2.5 px-2
+      }
+
+      @apply ml-auto
+    }
+
+    @apply flex items-center mx-auto lg:p-4;
+  }
+
+  @apply flex items-center py-2.5 fixed z-10;
+}
+
+@media only screen and (max-width: 375px) {
+  .headerWrap {
+    .headerLeftWrap {
+      .btnToggleSideBar {
+        @apply block
+      }
+    }
+  }
+}

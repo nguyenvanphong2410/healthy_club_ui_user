@@ -1,0 +1,25 @@
+.colRight {
+    display: flex;
+    padding-right: 10px;
+}
+
+.infoItem {
+    margin: 10px 0;
+
+    .titleOrigin {
+        font-size: 15px;
+        color: #3a3a3a;
+        font-weight: 700;
+    }
+
+    .info {
+        color: #726c6c;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+}

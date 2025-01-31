@@ -1,0 +1,90 @@
+.card {
+  width: 100%;
+  background: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: -40px;
+}
+
+.card-item {
+  font-size: 70px;
+  margin: 0 5px;
+  border: none;
+  background-color: #fff;
+  cursor: grab;
+}
+
+.card-avatar:hover {
+  transform: scale(2.1);
+  transition: 2s ease;
+}
+
+.emojis {
+  display: inline-block;
+  animation: 200s sliding infinite linear;
+}
+
+/* to pause on hover  */
+.card:hover .emojis {
+  animation-play-state: paused;
+}
+
+@keyframes sliding {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-101%);
+  }
+}
+
+//Card
+.card-item {
+  background: #fff;
+  position: relative;
+  width: 300px;
+  height: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color);
+}
+
+.card-img {
+  height: 192px;
+  width: 100%;
+}
+
+.card-avatar {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  top: calc(50% - 57px);
+
+  img {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.card-avatar svg {
+  width: 100px;
+  height: 100px;
+}
+
+.card-title {
+  margin-top: 80px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+}
+
+.card-subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  color: gray;
+}
+

@@ -1,0 +1,79 @@
+@import "../../../../assets/scss/variables.scss";
+
+.studyRoadmapWrap {
+  background: #cfe0e7;
+  padding: 200px;
+  background-image: url('https://img.lovepik.com/bg/20231218/Expansive-Gym-Background-with-Abundance-of-Fitness-Equipment_2611111_wh860.jpg!/fw/860');
+  background-size: cover;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 100px;
+    font-weight: 700;
+    background-color: #056bca;
+    border-radius: 6px;
+  }
+
+  .skill1 {
+    padding: 20px;
+    padding-top: 65px;
+    padding-left: 25%;
+    border-radius: 6px;
+    height: 200px;
+    box-shadow: rgb(0, 0, 0) 0px 30px 50px -3px;
+    background: linear-gradient(rgb(207, 208, 216) 0%, $colorMain 0%, #322f68 100%);
+    transition: transform 0.8s ease, box-shadow 0.3s ease;
+
+    /* Thêm thuộc tính transition */
+    &:hover {
+      box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+      transform: scale(1.2);
+    }
+
+    .iconSkill {
+      width: 50px;
+      color: $colorGray;
+    }
+
+    .wrapTextAndIcon {
+      display: flex;
+      align-items: center;
+      /* Thêm dòng này để căn giữa theo chiều dọc */
+
+      .textSkill {
+        font-size: 30px;
+        /* Sửa lỗi font-size '20x' thành '20px' */
+        color: #252525;
+        margin-top: 20px;
+        font-weight: 600;
+        color: $colorGray;
+      }
+
+      .iconSkill2 {
+        width: 20px;
+        margin-left: 15px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .bg1 {}
+
+  .bg2 {
+    transform: perspective(1000px) rotateY(35deg) rotateX(0deg);
+    height: 190px;
+    margin-top: 5px;
+  }
+
+  .bg3 {
+    transform: perspective(1000px) rotateY(-35deg) rotateX(0deg);
+    height: 190px;
+    margin-top: 5px;
+  }
+
+  .bg4 {}
+}

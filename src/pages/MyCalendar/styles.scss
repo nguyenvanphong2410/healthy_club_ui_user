@@ -1,0 +1,10 @@
+.calendarBooking.ant-picker-calendar {
+    .ant-picker-date-panel {
+        .ant-picker-content th {
+            width: calc(100% / 7);
+            color: rgb(11, 9, 155);
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+}

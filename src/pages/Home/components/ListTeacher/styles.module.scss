@@ -1,0 +1,31 @@
+@import "../../../../assets/scss/variables";
+
+
+.sliderHeading {
+    margin-top: -30px;
+    margin-bottom: 100px;
+
+    .title {
+        word-wrap: break-word;
+        color: $colorBlueStrong;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 60px;
+        padding: 10px;
+        text-align: center;
+        margin-top: 150px;
+
+        .titlePart {
+            color: $colorMain;
+        }
+    }
+    
+    .subtitle {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 300;
+        margin-top: 27px;
+        margin-bottom: 30px;
+    }
+}

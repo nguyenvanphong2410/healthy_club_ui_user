@@ -1,0 +1,185 @@
+@import "../../assets/scss/variables.scss";
+
+.card {
+    position: relative;
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 40px #e4e2e2, -10px -10px 40px #ffffff;
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 120px;
+    z-index: 1;
+    margin-bottom: 100px;
+}
+
+.bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 1190px;
+    height:calc(100vh - 176px);
+    z-index: 2;
+    background: rgba(46, 46, 46, 0.95);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+
+}
+
+.blob {
+    // position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 1190px;
+    height:calc(100vh - 166px);
+    border-radius: 50%;
+    background-color: $colorMain;
+    opacity: 1;
+    filter: blur(50px);
+    animation: blob-bounce 5s infinite ease;
+}
+
+.stepWrap {
+    width: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    :global {
+        .ant-steps-item-title {
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
+        }
+
+        .ant-steps-item-process {
+            >.ant-steps-item-container {
+                >.ant-steps-item-content {
+                    >.ant-steps-item-title {
+                        color: $colorMain;
+
+                        &::after {
+                            background-color: $colorBlueStrong;
+                        }
+                    }
+                }
+            }
+
+            .ant-steps-item-icon {
+                background-color: $colorMain;
+                border-color: $colorMain;
+            }
+        }
+
+        .ant-steps-item-finish {
+            >.ant-steps-item-container {
+                >.ant-steps-item-content {
+                    >.ant-steps-item-title {
+                        color: $colorMain;
+
+                        &::after {
+                            background-color: $colorMain;
+                        }
+                    }
+                }
+            }
+
+            .ant-steps-item-icon {
+                background-color: $colorGray;
+                border-color: $colorGray;
+
+                >.ant-steps-icon {
+                    color: $colorMain;
+                }
+            }
+        }
+
+        .ant-steps-item-wait {
+            >.ant-steps-item-container {
+                >.ant-steps-item-content {
+                    >.ant-steps-item-title {
+                        color: $colorMain;
+
+                        &::after {
+                            background-color: #252839;
+                        }
+                    }
+                }
+            }
+
+            .ant-steps-item-icon {
+                border-color: $colorMain;
+                background-color: #ca416e0f;
+
+                >.ant-steps-icon {
+                    color: $colorMain;
+                }
+            }
+        }
+
+        .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process)>.ant-steps-item-container[role='button']:hover .ant-steps-item-icon {
+            border-color: $colorMain;
+            color: $colorMain;
+        }
+
+        .ant-steps-item:not(.ant-steps-item-active)>.ant-steps-item-container[role='button']:hover .ant-steps-item-title {
+            color: $colorMain;
+        }
+
+        .ant-steps-item:not(.ant-steps-item-active)>.ant-steps-item-container[role='button']:hover .ant-steps-item-subtitle {
+            color: $colorMain;
+        }
+
+        .ant-steps-item:not(.ant-steps-item-active)>.ant-steps-item-container[role='button']:hover .ant-steps-item-description {
+            color: $colorMain;
+        }
+
+        .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process)>.ant-steps-item-container[role='button']:hover .ant-steps-item-icon .ant-steps-icon {
+            color: $colorMain;
+        }
+
+        .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after {
+            background-color: $colorMain;
+        }
+
+        .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-tail::after {
+            background-color: #252839;
+        }
+    }
+}
+
+.contentWrap {
+    padding-top: 8px;
+    height: calc(100vh - 200px);
+}
+
+@keyframes blob-bounce {
+    0% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+
+    50% {
+        transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+
+    75% {
+        transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+}
+

@@ -1,0 +1,61 @@
+@import "../../../../assets/scss/variables.scss";
+
+.testimonialWrap {
+  margin: 100px auto;
+  margin-top: 140px;
+
+  .titleWrap {
+    text-align: center;
+    .title {
+      word-wrap: break-word;
+      color: $colorBlueStrong;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 60px;
+
+      .titlePart {
+        color: $colorMain;
+    }
+    }
+
+    .line {
+      background-color: $colorWhite;
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      width: 270px;
+
+      &::before {
+        background-color: $colorWhite;
+        border-radius: 2px;
+        content: "";
+        display: inline-block;
+        height: 5px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+      }
+    }
+
+    .subtitle {
+      color: $colorMain;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 300;
+      margin-top: 5px;
+      margin-bottom: 80px;
+    }
+  }
+
+  .mainWrap {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    flex-wrap: wrap;
+    /* Đảm bảo rằng các Col sẽ xuống hàng khi cần */
+    margin: 0 auto;
+    /* Đảm bảo container được căn giữa */
+  }
+}

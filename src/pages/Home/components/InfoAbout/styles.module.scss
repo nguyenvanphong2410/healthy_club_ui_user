@@ -1,0 +1,33 @@
+@import "../../../../assets/scss/variables.scss";
+
+.infoAboutWrap {
+    margin-top: 100px;
+    background: $colorBlack;
+    padding: 100px;
+
+    .textRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        margin-top: 80px;
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: $colorBlueStrong;
+    }
+
+    .textDes {
+        font-size: 20px;
+        color: $colorGrayStrong;
+        margin-top: 30px;
+        text-align: justify;
+    }
+
+    .imgNamChau {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

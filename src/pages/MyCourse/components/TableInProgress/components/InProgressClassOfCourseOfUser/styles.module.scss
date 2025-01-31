@@ -1,0 +1,26 @@
+.contentInfoWrap {
+    margin-left: 37px;
+    .itemInfo {
+      display: flex;
+  
+      .fieldName {
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 4px;
+        display: flex;
+        flex-wrap: nowrap;
+        min-width: 80px;
+      }
+  
+      .content {
+        color: grey;
+       
+  
+        .textThreeDot {
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }

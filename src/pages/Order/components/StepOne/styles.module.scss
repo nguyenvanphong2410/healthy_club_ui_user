@@ -1,0 +1,115 @@
+@import "../../../../assets//scss/variables.scss";
+
+
+.coursePropertiesWrap {
+  border: 1px solid $colorBlueStrong;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 30px;
+  background-color: $colorBlueStrong;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 12%;
+
+  .pointWrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .point {
+      color: $colorMain;
+      font-size: 46px;
+      padding-right: 10px;
+      padding-left: 10px;
+      position: relative;
+      font-weight: 900;
+      line-height: 1;
+      margin-top: -1px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: -6px;
+        height: 50px;
+        width: 1px;
+        background: #252839;
+      }
+    }
+
+    .text {
+      align-items: center;
+      display: flex;
+      font-size: 16px;
+      min-height: 48px;
+      padding-left: 21.5px;
+      padding-right: 9px;
+      font-weight: 300;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding: 20px 10px;
+  }
+}
+
+.descriptionWrap {
+  display: flex;
+  flex-direction: column;
+
+  >* {
+    width: max-content;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    padding-bottom: 0.55rem;
+    padding-top: 0.55px;
+
+    &::before {
+      content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20512%22%3E%3Cpath%20fill%3D%22%23ca416e%22%20d%3D%22M246.6%20278.6c12.5-12.5%2012.5-32.8%200-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8%2016.6-19.8%2029.6l0%20256c0%2012.9%207.8%2024.6%2019.8%2029.6s25.7%202.2%2034.9-6.9l128-128z%22%2F%3E%3C%2Fsvg%3E');
+      display: inline-block;
+      width: 0.5rem;
+      height: auto;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.payNow,
+.backNow {
+  padding: 10px 28px;
+  background: $colorMain;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  min-width: 150px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: $colorWhite;
+  font-size: 16px;
+
+  &:global(:not(:disabled):not(.ant-btn-disabled):hover) {
+    background: transparent;
+    border-color: $colorMain;
+    color: $colorMain;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+.payNow {
+  width: 100%;
+}
