@@ -3,14 +3,14 @@ import styles from './styles.module.scss';
 import { Drawer, Tabs } from 'antd';
 import Handle from './handle.js';
 import Information from './components/Information';
-import ChangePassword from './components/ChangePassword';
+// import ChangePassword from './components/ChangePassword';
 import InlineSVG from 'react-inlinesvg';
 import Close from '@/assets/images/icons/duotone/times.svg';
 import ImageUser from '@/assets/images/logos/user_default.png';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 function PopoverProfile() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const {
     isShowInformation,
     setIsShowInformation,
@@ -26,20 +26,20 @@ function PopoverProfile() {
       label: 'Thông tin',
       children: <Information handleResetError={() => handleResetError()} />,
     },
-    {
-      key: '2',
-      label: 'Mật khẩu',
-      children: <ChangePassword handleResetError={() => handleResetError()} />,
-    },
+    // {
+    //   key: '2',
+    //   label: 'Mật khẩu',
+    //   children: <ChangePassword handleResetError={() => handleResetError()} />,
+    // },
   ];
 
-  const handleClickMyCourse = () => {
-    navigate('/my-courses');
-  };
+  // const handleClickMyCourse = () => {
+  //   navigate('/my-courses');
+  // };
 
-  const handleClickMyCal = () => {
-    navigate('/my-calendar');
-  };
+  // const handleClickMyCal = () => {
+  //   navigate('/my-calendar');
+  // };
 
   return (
     <div className={styles.modalInfoWrap}>
@@ -55,16 +55,16 @@ function PopoverProfile() {
               <span className={styles.text}>Thông tin cá nhân</span>
             </div>
           </li>
-          <li onClick={() => handleClickMyCourse()} className={`${styles.itemInfoWrap}`}>
+          {/* <li onClick={() => handleClickMyCourse()} className={`${styles.itemInfoWrap}`}>
             <div>
               <span className={styles.text}>Khóa tập của tôi</span>
             </div>
-          </li>
-          <li onClick={() => handleClickMyCal()} className={`${styles.itemInfoWrap}`}>
+          </li> */}
+          {/* <li onClick={() => handleClickMyCal()} className={`${styles.itemInfoWrap}`}>
             <div>
               <span className={styles.text}>Lịch của tôi</span>
             </div>
-          </li>
+          </li> */}
           <li onClick={() => handleConfirmLogout()} className={styles.itemInfoWrap}>
             <div>
               <span className={styles.text}>Đăng xuất</span>

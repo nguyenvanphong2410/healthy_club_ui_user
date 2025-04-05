@@ -32,21 +32,20 @@ const router = createBrowserRouter([
     element: <Order />,
     loader: ({ request, params }) => rootLoader({ request, params }, true, 'LOAD_ORDER_PAGE'),
   },
-  {
-    path: '/my-courses',
-    element: <MyCourse />,
-    loader: ({ request, params }) => rootLoader({ request, params }, true, 'LOAD_MY_COURSE_PAGE'),
-  },
-  {
-    path: '/my-calendar',
-    element: <MyCalendar/>,
-    loader: ({ request, params }) => rootLoader({ request, params }, true, 'LOAD_MY_CALENDAR_PAGE'),
-  },
+  // {
+  //   path: '/my-courses',
+  //   element: <MyCourse />,
+  //   loader: ({ request, params }) => rootLoader({ request, params }, true, 'LOAD_MY_COURSE_PAGE'),
+  // },
+  // {
+  //   path: '/my-calendar',
+  //   element: <MyCalendar/>,
+  //   loader: ({ request, params }) => rootLoader({ request, params }, true, 'LOAD_MY_CALENDAR_PAGE'),
+  // },
   {
     path: '/details-course/:id',
     element: <DetailsCourse />,
-    loader: ({request, params}) =>
-      rootLoader({request, params}, true, 'LOAD_DETAILS_COURSE_PAGE', []),
+    loader: ({ request, params }) => rootLoader({ request, params }, true, 'LOAD_DETAILS_COURSE_PAGE', []),
   },
   {
     path: '/403',

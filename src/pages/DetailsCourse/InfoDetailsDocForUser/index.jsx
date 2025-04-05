@@ -32,13 +32,13 @@ const InfoDetailsDocForUser = () => {
         <Col xs={24} sm={24} md={12} lg={12}>
           <div className={styles.infoItem}>
             <span className={styles.titleOrigin}>
-              <PicLeftOutlined /> Mã khóa tập: 
+              <PicLeftOutlined /> Mã khóa tập:
             </span>
             <span className={styles.info}>{courseDetails?.code}</span>
           </div>
         </Col>
         <Col xs={24} sm={24} md={12} lg={12} className={`${styles.colRight} justify-end`}>
-        <div className={`${styles.infoItem} flex`}>
+          <div className={`${styles.infoItem} flex`}>
             <span className={styles.titleOrigin}>
               <PicLeftOutlined /> Giá:
             </span>
@@ -63,7 +63,10 @@ const InfoDetailsDocForUser = () => {
             <span className={styles.titleOrigin}>
               <FieldTimeOutlined /> Thời gian học:
             </span>
-            <span className={styles.info}> {dayjsFormatSort(courseDetails?.start_time)} đến {dayjsFormatSort(courseDetails?.end_time)}</span>
+            <span className={styles.info}>
+              {' '}
+              {dayjsFormatSort(courseDetails?.start_time)} đến {dayjsFormatSort(courseDetails?.end_time)}
+            </span>
           </div>
         </Col>
       </Row>
@@ -101,7 +104,7 @@ const InfoDetailsDocForUser = () => {
                 type="primary"
                 size="large"
                 className="main-btn-primary"
-                onClick={() => handleClickRegisterCourse(courseDetails)}
+                // onClick={() => handleClickRegisterCourse(courseDetails)}
               >
                 Đăng ký ngay
               </Button>

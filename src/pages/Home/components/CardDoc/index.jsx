@@ -84,7 +84,7 @@ const CardDoc = () => {
                             <Button
                               size={'large'}
                               className={`${isSelectedCourse && selectedClassId ? 'main-btn-primary' : ''} !w-auto`}
-                              onClick={() => handleClickRegisterCourse(item)}
+                              // onClick={() => handleClickRegisterCourse(item)}
                               disabled={!isSelectedCourse || !selectedClassId} // Chỉ bật nút khi có lớp được chọn và khóa tập này đang được chọn
                             >
                               Đăng ký ngay

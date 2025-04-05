@@ -1,4 +1,6 @@
-import {all, fork, put, select, takeLatest} from 'redux-saga/effects';
+import { all, fork, put, select, takeLatest } from 'redux-saga/effects';
+import { requestCommentByIdCourse } from '@/api/comment';
+import { getNotification } from '@/utils/helper';
 import {
   createCommentFail,
   createCommentSuccess,
@@ -9,17 +11,13 @@ import {
   setIsShowModalUpdateComment,
   updateCommentFail,
   updateCommentSuccess,
-} from '../../../../../../../hoang_student/source code/hoang_ui/src/states/modules/comment';
-import {requestCommentByIdCourse} from '@/api/comment';
-import {getNotification} from '@/utils/helper';
+} from '../../comment';
 
-function* loadRouteData() {
-
-}
+function* loadRouteData() {}
 
 function* handleActions() {
   yield takeLatest(createCommentSuccess, function* () {
-    const {app} = yield select();
+    const { app } = yield select();
     if (app.location.params.id) {
       yield put(requestCommentByIdCourse(app.location.params.id));
     }
@@ -46,7 +44,7 @@ function* handleActions() {
   });
 
   yield takeLatest(updateCommentSuccess, function* () {
-    const {app} = yield select();
+    const { app } = yield select();
     if (app.location.params.id) {
       yield put(requestCommentByIdCourse(app.location.params.id));
     }
@@ -74,7 +72,7 @@ function* handleActions() {
   });
 
   yield takeLatest(deleteCommentSuccess, function* () {
-    const {app} = yield select();
+    const { app } = yield select();
     if (app.location.params.id) {
       yield put(requestCommentByIdCourse(app.location.params.id));
     }
